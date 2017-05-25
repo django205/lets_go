@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yogeshkumar.letsgo.MainActivity">
+
+    <com.github.developer__.BeforeAfterSlider
+        android:id="@+id/before_after_slider_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:before_image="@drawable/india"
+        app:after_image="@drawable/netherland"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="26dp"
+            android:onClick="onleft"
+            android:visibility="visible"
+            app:srcCompat="@android:drawable/btn_plus" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/imageButton"
+            android:layout_marginEnd="88dp"
+            android:onClick="onright"
+            app:srcCompat="@android:drawable/btn_plus" />
+    </com.github.developer__.BeforeAfterSlider>
+
+</android.support.constraint.ConstraintLayout>
