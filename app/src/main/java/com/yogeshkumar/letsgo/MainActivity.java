@@ -1,7 +1,7 @@
 package com.yogeshkumar.letsgo;
 
-import android.app.ActionBar;
 import android.content.res.Configuration;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +21,8 @@ BeforeAfterSlider mySlider;
         mySlider=(BeforeAfterSlider)findViewById(R.id.before_after_slider_id);
 left=(ImageButton)findViewById(R.id.imageButton);
         right=(ImageButton)findViewById(R.id.imageButton2);
-        String imgUrl1 = "http://storage.googleapis.com/ix_choosemuse/uploads/2016/02/android-logo.png";
-        String imgUrl2 = "http://www.heise.de/imgs/18/1/4/5/4/0/3/1/kotlin-746417a7cc2556af.jpeg";
+        String imgUrl1 = "https://goo.gl/YRxlCq";
+        String imgUrl2 = "https://goo.gl/v7kocq";
      mySlider.setBeforeImage(imgUrl1).setAfterImage(imgUrl2);
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -32,15 +32,22 @@ left=(ImageButton)findViewById(R.id.imageButton);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
            getSupportActionBar().show();
         }
-
-
-
     }
 
     public void onleft(View v){
         Toast.makeText(this, "left is clicked", Toast.LENGTH_SHORT).show();
+        showMessage();
     }
     public void onright(View v){
         Toast.makeText(this, "right is clicked", Toast.LENGTH_SHORT).show();
+    showMessage();
+    }
+    public void showMessage(){
+
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setCancelable(true).
+                setTitle("django").
+                setMessage("this is interesting")
+                .show();
     }
 }
